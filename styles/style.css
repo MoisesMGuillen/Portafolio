@@ -1,0 +1,185 @@
+/*Importando fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/*Variables*/
+:root{
+    --color-azul: #70bbcf;
+    --fuente-botones: "Tiny5", sans-serif;
+    --fuente-8bit: "Press Start 2P", system-ui;
+    --color-azulbajito: #85beb9;
+    --color-gris: #31393b;
+    --fuente-VT: "VT323", monospace;;
+}
+
+/*Código CSS*/
+body {
+    background-color: #060A0D;
+    color: white;
+    height: 70vh;
+    box-sizing: border-box;
+}
+
+/*Header y sus elementos*/
+.header{
+    padding: 2% 0% 1% 1.50%;
+    width: 50%;
+}
+
+.header_menu{
+    display:flex;
+    gap: 2.8rem;
+}
+
+.menu_link{
+    font-family: var(--fuente-botones);
+    font-size: 0.925rem;
+    color: var(--color-azul);
+    text-decoration: none;
+}
+
+.referencia{
+    font-family: var(--fuente-VT);
+    font-size: 1rem;
+    color: var(--color-azul);
+    text-decoration: none;
+}
+
+/*Resaltado*/
+strong{
+    color: var(--color-azul);
+}
+/*Texto con marco*/
+span{
+    text-align: center;
+    white-space: nowrap;
+    color: var(--color-azul);
+    border: 2px solid var(--color-azul);
+}
+
+*{
+    padding: 1;
+    margin: 1;
+}
+
+/*Alineación de ambos contenidos; presentación e imagen*/
+.presentacion{
+    display: flex;
+    align-content: center;
+    padding: 1% 1%; /*El espacio del marco entre ambos elementos: texto e imagen de Jack Frost*/
+    justify-content: space-evenly;
+    /*align-items y justify-content. Son responsables de que cuando se utilizan en el 
+    elemento padre, son responsables del espaciado de los elementos hijos*/
+}
+
+.presentacion_contenido{
+    width:85rem; /*El tamaño del marco*/
+}
+
+.presentacion_contenido_titulo{
+    font-size: 1.2rem;
+    font-family: var(--fuente-8bit); /*Eligiendo fuente*/
+}
+
+.presentacion_contenido_introduccion{
+    font-size: 0.8rem;
+    font-family: var(--fuente-8bit);
+}
+
+/*El título "Redes sociales:"*/
+.presentacion_contenido_redes{
+    font-size: 0.8rem;
+    font-family: var(--fuente-8bit);
+    gap:40px; /*Esta propiedad especifica en CSS el tamaño de los espacios entre filas y columnas en diseños de cuadrícula, 
+                flex y de varias columnas. Su sintaxis es bastante simple y acepta uno o dos valores.*/
+    padding-bottom: 20px;
+}
+
+/*posición de los botones de cada red social*/
+.presentacion_contenido_redes_botones{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; /*Posicionamiento en fila de los botones*/
+    align-items: center;
+    gap:25px;
+}
+
+/*Cada botón individualmente PENDIENTE DE CAMBIOS Y AGREGAR A VARIABLES LOS COLORES*/
+.presentacion_redes_link{
+    font-family: var(--fuente-botones);
+    font-size: 12.5px;
+    display: flex;
+    background-color: var(--color-azulbajito);
+    color: var(--color-gris);
+    align-items: center;
+    letter-spacing: 0.125rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0.1875rem solid;
+    padding: 0.5em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 0.125rem 2px 0px 0px, 0.1875rem 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+/*Acción cuando el botón se es colocado el mouse PENDIENTE DE CAMBIOS Y AGREGAR A VARIABLES LOS COLORES*/
+.presentacion_redes_link:hover{
+    background-color: var(--color-azulbajito);
+    box-shadow: 0 0 #373B3C;
+    color: #373B3C;
+    background-color: var(--color-azulbajito);
+}
+
+/*Iconos pixel art de cada botón*/
+.icono{
+    width: 1.25rem;
+    padding-right: 0.625rem;
+}
+
+/*Parte inferior de la página*/
+.footer{
+    font-family: var(--fuente-VT);
+    background-color: #373B3C;
+    position:fixed;
+    padding:5px 20px 35px 10px; 
+    color: #ffffff;
+    font-size: 1rem;
+    bottom:0px;
+    left:0%;
+    text-align:justify;
+    width: 97.6%;
+    height: 1.5rem;
+}
+
+.jackfrostimagen{
+    width: 100%;
+}
+
+/*Junto a los width, esto se encarga de la responsividad*/
+@media (max-width: 1200px ){
+    .presentacion{
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .presentacion_contenido{
+        width:fit-content;
+        padding-bottom: 5%;
+    }
+
+    .presentacion_contenido_titulo{
+        width: fit-content;
+    }
+
+    .header{
+        padding-left: 1.15rem;
+    }
+    .jackfrostimagen{
+        width:75%;
+        padding-left: 12.7%;
+    }
+}
